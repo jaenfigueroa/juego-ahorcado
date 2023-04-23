@@ -3,12 +3,12 @@ import { addWordToLocalStorage } from '../modules/db'
 const buttonStartGame = document.querySelector<HTMLButtonElement>('#button-start-game') as HTMLButtonElement
 const buttonAddWord = document.querySelector<HTMLButtonElement>('#button-add-word') as HTMLButtonElement
 const buttonSaveWord = document.querySelector<HTMLButtonElement>('#button-save-word') as HTMLButtonElement
-const buttonExitSection2 = document.querySelector<HTMLButtonElement>('#button-exit-section-2') as HTMLButtonElement
-const buttonExitSection3 = document.querySelector<HTMLButtonElement>('#button-exit-section-3') as HTMLButtonElement
 const section1 = document.querySelector<HTMLElement>('#section-1') as HTMLElement
 const section2 = document.querySelector<HTMLElement>('#section-2') as HTMLElement
 const section3 = document.querySelector<HTMLElement>('#section-3') as HTMLElement
 const textareaNewWord = document.querySelector<HTMLTextAreaElement>('#textarea-new-word') as HTMLTextAreaElement
+const buttonExitSection2 = document.querySelector<HTMLButtonElement>('#button-exit-section-2') as HTMLButtonElement
+const buttonExitSection3 = document.querySelector<HTMLButtonElement>('#button-exit-section-3') as HTMLButtonElement
 
 const changeSection = (element1:HTMLElement, element2: HTMLElement) => {
   element1.classList.remove('section--active')
@@ -28,9 +28,13 @@ buttonAddWord.addEventListener('click', () => {
 //AGRERAR LA PALABRA A LA LISTA DE POSIBLES PALABRAS
 buttonSaveWord.addEventListener('click', () => {
   const word:string | undefined = textareaNewWord?.value
-  word && addWordToLocalStorage(word)
 
-  changeSection(section2, section3)
+  if (word && word.length >= 8) {
+    addWordToLocalStorage(word)
+    changeSection(section2, section3)
+  } else{
+    console.log('No hay texto para guardar o el texto supera los 8 caracteres')
+  }
 })
 
 //DESISTIR DE LA SECCION 2 (AGREGAR NUEVA PALABRA)
