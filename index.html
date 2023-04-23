@@ -18,28 +18,28 @@
     <main class="main">
 
       <!-- SECCION 1 -->
-      <section class="section section-1">
+      <section class="section section-1 section--active" id="section-1">
         <div class="button-container">
-          <button class="boton">Iniciar juego</button>
-          <button class="boton">Agregar nueva palabra</button>
+          <button class="boton" id="button-start-game">Iniciar juego</button>
+          <button class="boton" id="button-add-word">Agregar nueva palabra</button>
         </div>
       </section>
 
       <!-- SECCION 2 -->
-      <section class="section section-2">
-        <textarea class="textarea"></textarea>
+      <section class="section section-2" id="section-2">
+        <textarea class="textarea" placeholder="Ingrese una palabra" id="textarea-new-word"></textarea>
         <div class="aviso">
           <img src="./src/assets/aviso.svg" alt="icono de aviso">
           <p>Max. de 8 letras</p>
         </div>
         <div class="button-container">
-          <button class="boton">Guardar y empezar</button>
-          <button class="boton">Cancelar</button>
+          <button class="boton" id="button-save-word">Guardar y empezar</button>
+          <button class="boton" id="button-exit-section-2">Cancelar</button>
         </div>
       </section>
 
       <!-- SECCION 3 -->
-      <section class="section section-3">
+      <section class="section section-3" id="section-3">
         <div class="pantalla">
           <div class="pantalla__container">
             <img class="pantalla__item pantalla__item--visible" src="./src/assets/persona-piso.svg" alt="pieza piso">
@@ -64,12 +64,10 @@
           <p class="letras">S</p>
           <p class="letras">A</p>
         </div>
-        <p class="usados" id="letras-usadas">
-          CASACASA
-        </p>
+        <p class="usados" id="letras-usadas">CASACASA</p>
         <div class="button-container">
           <button class="boton">Nuevo Juego</button>
-          <button class="boton">Desistir</button>
+          <button class="boton" id="button-exit-section-3">Desistir</button>
         </div>
       </section>
     <main/>

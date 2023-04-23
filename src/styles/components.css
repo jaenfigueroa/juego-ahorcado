@@ -17,10 +17,14 @@
 /* TEXTAREA */
 .textarea{
   background: transparent;
-  border: 1px dashed green;
   resize: none;
   outline: none;
   font-size: 2.5rem;
+  color: var(--primary);
+  border: none;
+  /* border: 1px dashed green; */
+}
+.textarea::placeholder{
   color: var(--primary);
 }
 

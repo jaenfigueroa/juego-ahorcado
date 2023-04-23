@@ -23,23 +23,23 @@
 /* MAIN */
 .main{
   display: flex;
-  border: 1px dashed red;
   flex-grow: 1;
-  /* background: green; */
 }
 
 .section{
-  display: flex;
-  /* background: red; */
+  display: none;
   flex-grow: 1;
   flex-direction: column;
   padding: 1.5rem;
 }
 
+.section--active{
+  display: flex;
+}
+
 /* SECCION 1 */
 .section-1{
-  display: flex;
-  display: none;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -50,7 +50,6 @@
   justify-content: center;
   flex-direction: column;
   gap: 1.5rem;
-  border: 1px dashed green;
   width: 100%;
   max-width: 300px;
 }
@@ -62,23 +61,23 @@
 
 /* SECCION 2 */
 .section-2{
-  display: none;
+  /* display: none; */
   gap: 1rem;
   max-width: 800px;
 }
 
 .section-2 .textarea{
   flex-grow: 1;
+  margin-top: 4rem;
 }
 
 .section-2 .aviso{
-  border: 1px dashed blueviolet;
   display: flex;
   gap: 1rem;
+  padding: 1rem 0;
 }
 
 .section-2 .button-container{
-  border: 1px dashed green;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -89,14 +88,20 @@
 }
 
 @media (min-width: 500px) {
+  .header{
+    padding: 2rem 2.5rem;
+  }
+  .section{
+    padding: 2rem;
+  }
   .section-2{
     margin: auto auto;
     max-height: 600px;
-    /* background: red; */
   }
   .section-2 .textarea{
     height: 600px;
     font-size: 3rem;
+    margin-top: 0rem;
   }
   .section-2 .button-container{
     flex-direction: row;
@@ -115,14 +120,12 @@
 
 .section-3 .pantalla{
   max-height: 300px;
-  border: 1px dashed violet;
 }
 
 .section-3 .pantalla__container{
   width: 100%;
   height: 100%;
   aspect-ratio: 1;
-  /* background: green; */
   display: flex;
   justify-content: center;
   position: relative;
@@ -143,7 +146,6 @@
   gap: 2rem;
   align-items: center;
   justify-content: center;
-  border: 1px dashed violet;
 }
 
 .section-3 .letras{
@@ -157,11 +159,9 @@
   align-items: center;
   justify-content: center;
   color: var(--gray);
-  border: 1px dashed violet;
 }
 
 .section-3 .button-container{
-  border: 1px dashed violet;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
