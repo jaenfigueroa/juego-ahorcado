@@ -1,0 +1,37 @@
+/* BOTON */
+.boton{
+  background: transparent;
+  color: var(--primary);
+  padding: 1.8rem;
+  border-radius: 1rem;
+  border: 1px solid var(--primary);
+  /* transition: background 500ms linear; */
+}
+
+.boton:hover,
+.boton--active{
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+/* TEXTAREA */
+.textarea{
+  background: transparent;
+  border: 1px dashed green;
+  resize: none;
+  outline: none;
+  font-size: 2.5rem;
+  color: var(--primary);
+}
+
+
+
+
+
+
+
+
+
+
+
+
