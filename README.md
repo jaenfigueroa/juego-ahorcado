@@ -7,18 +7,16 @@ El ahorcado es un juego en el que un jugador debe adivinar una palabra oculta ad
 </div>
 
 <div align="center" >
-<img src="https://img.shields.io/github/stars/jaenfigueroa/juego-ahorcado">
-<img src="https://img.shields.io/github/forks/jaenfigueroa/juego-ahorcado">
-<img src="https://img.shields.io/github/issues-pr/jaenfigueroa/juego-ahorcado">
-<img src="https://img.shields.io/github/issues/jaenfigueroa/juego-ahorcado">
-
+  <img src="https://img.shields.io/github/stars/jaenfigueroa/juego-ahorcado">
+  <img src="https://img.shields.io/github/forks/jaenfigueroa/juego-ahorcado">
+  <img src="https://img.shields.io/github/issues-pr/jaenfigueroa/juego-ahorcado">
+  <img src="https://img.shields.io/github/issues/jaenfigueroa/juego-ahorcado">
 </div>
 
 ## 📷 Capturas de pantalla
 
 - ### 💻 Desktop
 
-<!-- <img src="./public/ahor3.png" style="width: 100%"  /> -->
 <img src="./assets/ahor14.png" style="width: 100%"  />
 <img src="./assets/ahor13.png" style="width: 100%"  />
 
@@ -39,21 +37,16 @@ El ahorcado es un juego en el que un jugador debe adivinar una palabra oculta ad
   <img src="https://user-images.githubusercontent.com/25181517/187955005-f4ca6f1a-e727-497b-b81b-93fb9726268e.png" width="65px" height="67px" />
 </div>
 
-<!-- ##  🔠 Fuente de texto
-
-- Lato - https://fonts.google.com/specimen/Lato?vfquery=lato&query=lato -->
-
 ## 🎨 Paleta de colores
 
 <div>
-  <img src="https://via.placeholder.com/200x50/0a3871/FFF/?text=0a3871" style="width: 120px">
+  <img src="https://via.placeholder.com/200x50/0a3871/FFFFFF/?text=0a3871" style="width: 120px">
   <img src="https://via.placeholder.com/200x50/f3f5fc/000000/?text=f3f5fc" style="width: 120px">
-  <img src="https://via.placeholder.com/200x50/495057/FFF/?text=495057" style="width: 120px">
-  <!-- <img src="https://via.placeholder.com/200x50/FFFFFF/000000/?text=FFFFFF" style="width: 120px"> -->
+  <img src="https://via.placeholder.com/200x50/495057/FFFFFF/?text=495057" style="width: 120px">
 </div>
 
-<!-- ## 🌐 Sitio web
+## 🌐 Sitio web
 
-Puedes ver el resultado [aqui](https://jaenfigueroa.github.io/text-encriptor/).
+Puedes ver el resultado [aqui](https://juego-ahorcado-jaenfigueroa.netlify.app/).
 
-<img src="https://octodex.github.com/images/welcometocat.png" style="width: 25%"> -->
+<img src="https://octodex.github.com/images/welcometocat.png" style="width: 25%">
