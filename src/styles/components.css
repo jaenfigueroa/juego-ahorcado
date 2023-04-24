@@ -14,6 +14,10 @@
   color: var(--secondary);
 }
 
+.boton--novisible{
+  display: none;
+}
+
 /* TEXTAREA */
 .textarea{
   background: transparent;
@@ -49,6 +53,15 @@
   line-height: 25px;
   text-align: center;
 }
+.modal__buttons-container{
+  display: flex;
+  gap: 1.5rem;
+}
+
+.modal .boton{
+  flex-grow: 1;
+}
+
 .modal::backdrop{
   background: rgba(0, 0, 0, 0.697); /* DARLE OSCURIDAD DETRAS DEL MODAL */
 }

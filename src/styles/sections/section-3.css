@@ -26,20 +26,13 @@
 .section-3 .pantalla__item--visible{
   display: initial;
 }
-
-.section-3 .espacios{
-  display: flex;
+.section-3 .palabras{
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 1rem;
+  font-weight: bold;
   color: var(--primary);
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
 }
-
-.section-3 .letras{
-  font-size: 2rem;
-  border-bottom: 2px solid var(--primary);
-}
-
 .section-3 .usados{
   letter-spacing: 1rem;
   display: flex;
@@ -64,8 +57,8 @@
     margin: 0 auto;
     gap: 4rem;
   }
-  .section-3 .letras{
-    font-size: 3.5rem;
+  .section-3 .palabras{
+    letter-spacing: 2.5rem;
   }
   .section-3 .usados{
     font-size: 2rem;

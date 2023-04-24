@@ -17,7 +17,7 @@ export class Storage {
     const randomNum:number = Math.floor(Math.random() * (max + 1))
 
     this.actualWord = this.listWords[randomNum].toUpperCase().split('')
-    this.actualWordCrypt = new Array(this.actualWord.length).fill('X')
+    this.actualWordCrypt = new Array(this.actualWord.length).fill('_')
 
     return this.actualWordCrypt.join('')
   }
@@ -84,7 +84,12 @@ export class Storage {
 
   //VERIFICAR SI EL USUARIO YA GANO EL JUEGO
   verifyWin = () => {
-    return !this.actualWordCrypt.includes('X')
+    return !this.actualWordCrypt.includes('_')
+  }
+
+  //LIMPIAR
+  clear = () => {
+    this.usedLetters = []
   }
 }
 
