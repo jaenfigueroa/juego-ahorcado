@@ -47,9 +47,9 @@ El ahorcado es un juego en el que un jugador debe adivinar una palabra oculta ad
 
 <div>
   <img src="https://via.placeholder.com/200x50/0a3871/FFF/?text=0a3871" style="width: 120px">
-  <img src="https://via.placeholder.com/200x50/f3f5fc/FFF/?text=f3f5fc" style="width: 120px">
-  <img src="https://via.placeholder.com/200x50/495057/000000/?text=495057" style="width: 120px">
-  <img src="https://via.placeholder.com/200x50/FFFFFF/000000/?text=FFFFFF" style="width: 120px">
+  <img src="https://via.placeholder.com/200x50/f3f5fc/000000/?text=f3f5fc" style="width: 120px">
+  <img src="https://via.placeholder.com/200x50/495057/FFF/?text=495057" style="width: 120px">
+  <!-- <img src="https://via.placeholder.com/200x50/FFFFFF/000000/?text=FFFFFF" style="width: 120px"> -->
 </div>
 
 <!-- ## 🌐 Sitio web
