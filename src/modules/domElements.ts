@@ -1,0 +1,12 @@
+export const buttonStartGame = document.querySelector<HTMLButtonElement>('#button-start-game') as HTMLButtonElement
+export const buttonAddWord = document.querySelector<HTMLButtonElement>('#button-add-word') as HTMLButtonElement
+export const buttonSaveWord = document.querySelector<HTMLButtonElement>('#button-save-word') as HTMLButtonElement
+export const section1 = document.querySelector<HTMLElement>('#section-1') as HTMLElement
+export const section2 = document.querySelector<HTMLElement>('#section-2') as HTMLElement
+export const section3 = document.querySelector<HTMLElement>('#section-3') as HTMLElement
+export const textareaNewWord = document.querySelector<HTMLTextAreaElement>('#textarea-new-word') as HTMLTextAreaElement
+export const buttonExitSection2 = document.querySelector<HTMLButtonElement>('#button-exit-section-2') as HTMLButtonElement
+export const buttonExitSection3 = document.querySelector<HTMLButtonElement>('#button-exit-section-3') as HTMLButtonElement
+export const modal = document.querySelector<HTMLDialogElement>('#modal') as HTMLDialogElement
+export const modalText = document.querySelector<HTMLParagraphElement>('#modal-text') as HTMLParagraphElement
+export const buttonExitModal = document.querySelector<HTMLButtonElement>('#button-exit-modal') as HTMLButtonElement
