@@ -1,3 +1,13 @@
+import { buttonExitSection3, section1, section3 } from '../modules/domElements'
+import { handleKeyPress } from '../modules/keyPress'
+import { changeSection } from '../modules/navigate'
+
+//SALIR DE LA SECCION DEL JUEGO - VOLVER AL LA SECCION 1 (INICIO)
+buttonExitSection3?.addEventListener('click', () => {
+  changeSection(section3, section1)
+  window.removeEventListener('keypress', handleKeyPress) //DEJAR DE ESCUCHAR EL TECLADO
+})
+
 // AGREGAR UNA PIEZA DEL PERSONAJE /////////////////////////////////////
 export const addPiece = (number: number) => {
   const piece = document.querySelector<HTMLElement>(`.pieza-${number}`)
@@ -19,20 +29,3 @@ export const addLetter = (letter: string) => {
 
   element.textContent += letter.toUpperCase()
 }
-
-//MOSTRAR EL TEXTO DEL MODAL Y MOSTRARLO
-export const updateModal = (text: string, modal:HTMLDialogElement, modalText:HTMLParagraphElement) => {
-  modalText.textContent = text
-  modal.showModal() //MOSTRAR EL MODAL
-}
-
-
-
-
-
-
-
-
-
-
-
