@@ -18,7 +18,7 @@ const addLetter = (letter: string) => {
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 
-//ACTUALIZAR LA PALABRA
+//ACTUALIZAR LA PALABRA CIFRADA DE LA PANTALLA
 const updateWord = (text:string) => {
   wordText.textContent = text
 }
@@ -27,52 +27,38 @@ const updateWord = (text:string) => {
 export const handleKeyPress = (e:KeyboardEvent) => {
   const letter = e.key.toUpperCase()
 
-  // console.log(letter)
-  // console.log(myStorage.actual())
+  if (myStorage.existsLetter(letter)) { //comprobar si la letra es una de ellas en la palabra
 
-  //comprobar si la letra es una de ellas en la palabra
-  if (myStorage.existsLetter(letter)) {
+    if (!myStorage.verifyLetter(letter)) { //comprobar si el usuario ya lo tecleo antes
 
-    //comprobar si el usuario ya lo tecleo antes
-    if (!myStorage.verifyLetter(letter)) {
+      updateWord(myStorage.revealLetter(letter)) //si no es asi, dejar de ocultar esa letra
 
-      //si no es asi, dejar de ocultar esa letra
-      updateWord(myStorage.revealLetter(letter))
-
-      //comprobar que el usuario ya gano el juego
-      if (myStorage.verifyWin()) {
-        // updateModal(`Genial, adivinaste la palabra "${myStorage.actual()}", ganaste!! lo cual demuestra que eres un jugador de ahorcado muy habilidoso.`, clearGame)
-        updateModal(`Genial, adivinaste la palabra "${myStorage.actual()}", ganaste!! lo cual demuestra que eres un jugador de ahorcado muy habilidoso.`)
-        finishGame()
+      if (myStorage.verifyWin()) { //comprobar que el usuario ya gano el juego
+        updateModal(`Genial, adivinaste la palabra "${myStorage.actual()}", ganaste!! lo cual demuestra que eres un jugador de ahorcado muy habilidoso.`, 'Genial')
+        stopGame()
       }
 
       addLetter(letter)
     }
   } else{
     let intentosFallidos:number = myStorage.addFail()
+    addPiece(intentosFallidos) //mostrar nueva pieza
 
-    if (intentosFallidos <= 9) {
-      addPiece(intentosFallidos)
-    } else{
-      updateModal('Perdiste el Juego.')
-      finishGame()
+    if (intentosFallidos >= 9) { //comprobar que el usuario supero el numero de intentos
+      updateModal('Perdiste el Juego.', 'Salir')
+      stopGame()
     }
   }
 }
 
-//INICIAR JUEGO
+//INICIAR JUEGO /////////////////////////////////////////////////////////////////////
 export const startGame = () => {
-  window.addEventListener('keypress', handleKeyPress) //EMPEZAR A ESCUCHAR EL TECLADO
+  window.addEventListener('keypress', handleKeyPress)
 
   updateWord(myStorage.random())
 }
 
-//FINALIZAR JUEGO - DEJAR DE ESCUCHAR EL TECLADO
-const finishGame = () => {
-  window.removeEventListener('keypress', handleKeyPress)
-}
-
-//LIMPIAR PANTALLA Y REINCIAR DATOS
+//LIMPIAR PANTALLA Y REINCIAR DATOS ///////////////////////////////////////////////////
 export const clearGame = () => {
   //reinciiar lo visible
   updateWord(myStorage.random())
@@ -89,10 +75,24 @@ export const clearGame = () => {
   myStorage.random()
 }
 
-//REINICIAR EL JUEGO
+//REINICIAR EL JUEGO ////////////////////////////////////////////////////////
+//REINICIAR EL JUEGO ////////////////////////////////////////////////////////
 const resetGame = () => {
   clearGame()
   startGame()
+}
+
+//PARAR EL JUEGO ////////////////////////////////////////////////////////////
+//PARAR EL JUEGO ////////////////////////////////////////////////////////////
+const stopGame = () => {
+  window.removeEventListener('keypress', handleKeyPress)
+}
+
+//SALIR DEL JUEGO//////////////////////////////////////////////////////////////
+//SALIR DEL JUEGO/////////////////////////////////////////////////////////////
+const exitGame = () => {
+  resetGame()
+  stopGame()
 }
 
 //ESCUCHAR PARA VOLVER A JUGAR
@@ -100,7 +100,6 @@ buttonNewGame.addEventListener('click', resetGame)
 
 //SALIR DE LA SECCION DEL JUEGO - VOLVER AL LA SECCION 1 (INICIO) ////////////
 buttonExitSection3?.addEventListener('click', () => {
-  resetGame()
+  exitGame()
   changeSection(section3, section1)
-  finishGame()
 })
