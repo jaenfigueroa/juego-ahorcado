@@ -1,6 +1,6 @@
-import './ts/section-1'
-import './ts/section-2'
-import './ts/section-3'
+import './ts/sections/section-1' //SECCION INICIO
+import './ts/sections/section-2' //SECCION AGREGAR NUEVA PALABRA
+import './ts/sections/section-3' //SECCION JUEGO
 import './ts/modal'
 
 
