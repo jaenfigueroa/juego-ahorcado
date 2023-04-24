@@ -3,12 +3,7 @@ import { changeSection } from '../../modules/navigate'
 import { addWordToLocalStorage } from '../../modules/storage'
 import { updateModal } from '../modal'
 
-//SALIR DE LA SECCION DE AGREGAR NUEVA PALABRA - VOLVER AL LA SECCION 1 (INICIO)
-buttonExitSection2.addEventListener('click', () => {
-  changeSection(section2, section1)
-})
-
-//AGRERAR LA PALABRA A LA LISTA DE POSIBLES PALABRAS
+//GUARDAR LA PALABRA EN LA LISTA DE POSIBLES PALABRAS - LOCALSTORAGE
 buttonSaveWord?.addEventListener('click', () => {
   const word:string | undefined = textareaNewWord?.value
 
@@ -20,7 +15,10 @@ buttonSaveWord?.addEventListener('click', () => {
   }
 })
 
-
+//SALIR DE LA SECCION DE AGREGAR NUEVA PALABRA - VOLVER AL LA SECCION 1 (INICIO)
+buttonExitSection2.addEventListener('click', () => {
+  changeSection(section2, section1)
+})
 
 
 
