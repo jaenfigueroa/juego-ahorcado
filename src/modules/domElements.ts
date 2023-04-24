@@ -15,6 +15,7 @@ export const buttonExitSection2 = document.querySelector<HTMLButtonElement>('#bu
 export const buttonExitSection3 = document.querySelector<HTMLButtonElement>('#button-exit-section-3') as HTMLButtonElement
 export const wordText = document.querySelector<HTMLParagraphElement>('#word') as HTMLParagraphElement
 export const lettersUsed = document.querySelector<HTMLParagraphElement>('#letras-usadas') as HTMLParagraphElement
+export const buttonNewGame = document.querySelector<HTMLButtonElement>('#button-new-game') as HTMLButtonElement
 
 //MODAL
 export const modal = document.querySelector<HTMLDialogElement>('#modal') as HTMLDialogElement
