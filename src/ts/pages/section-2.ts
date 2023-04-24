@@ -1,7 +1,7 @@
 import { myStorage } from '../..'
-import { section1, section2, section3, buttonExitSection2, buttonSaveWord, textareaNewWord } from '../../modules/domElements'
-import { changeSection } from '../../modules/navigate'
-import { updateModal } from '../modal'
+import { section1, section2, section3, buttonExitSection2, buttonSaveWord, textareaNewWord } from '../modules/domElements'
+import { changeSection } from '../modules/navigate'
+import { updateModal } from '../components/modal'
 
 //GUARDAR LA PALABRA EN LA LISTA DE POSIBLES PALABRAS - LOCALSTORAGE
 buttonSaveWord?.addEventListener('click', () => {

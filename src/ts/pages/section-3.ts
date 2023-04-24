@@ -1,7 +1,7 @@
 import { myStorage } from '../..'
-import { section1, section3, buttonExitSection3, wordText, lettersUsed, buttonNewGame } from '../../modules/domElements'
-import { changeSection } from '../../modules/navigate'
-import { updateModal } from '../modal'
+import { section1, section3, buttonExitSection3, wordText, lettersUsed, buttonNewGame } from '../modules/domElements'
+import { changeSection } from '../modules/navigate'
+import { updateModal } from '../components/modal'
 
 // AGREGAR LETRA A LA LISTA DE LETRAS YA TECLEADAS /////////////////////////
 const addLetter = (letter: string) => {

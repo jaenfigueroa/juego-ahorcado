@@ -1,5 +1,5 @@
-import { changeSection } from '../../modules/navigate'
-import { buttonAddWord, buttonStartGame, section1, section2, section3 } from '../../modules/domElements'
+import { changeSection } from '../modules/navigate'
+import { buttonAddWord, buttonStartGame, section1, section2, section3 } from '../modules/domElements'
 import { handleKeyPress } from './section-3'
 
 //MOVERME A LA SECCIONDE INICIAR JUEGO
