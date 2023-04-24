@@ -4,24 +4,23 @@ import { changeSection } from '../modules/navigate'
 import { updateModal } from '../components/modal'
 
 // AGREGAR UNA PIEZA DEL PERSONAJE /////////////////////////////////////
-const addPiece = (number: number) => {
+const addPieceScreen = (number: number) => {
   const piece = document.querySelector<HTMLElement>(`#pieza-${number}`)
   piece?.classList.add('pantalla__item--visible')
 }
 
 // AGREGAR LETRA A LA LISTA DE LETRAS YA TECLEADAS /////////////////////////
-const addLetter = (letter: string) => {
+const addLetterScreen = (letter: string) => {
   lettersUsed.textContent += letter.toUpperCase()
 }
 
-///////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////
-
 //ACTUALIZAR LA PALABRA CIFRADA DE LA PANTALLA
-const updateWord = (text:string) => {
+const updateWordCryptScreen = (text:string) => {
   wordText.textContent = text
 }
+
+///////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
 
 //RECONOCER QUE TECLA SE SELECCIONA DURANTE EL JUEGO
 export const handleKeyPress = (e:KeyboardEvent) => {
@@ -31,18 +30,18 @@ export const handleKeyPress = (e:KeyboardEvent) => {
 
     if (!myStorage.verifyLetter(letter)) { //comprobar si el usuario ya lo tecleo antes
 
-      updateWord(myStorage.revealLetter(letter)) //si no es asi, dejar de ocultar esa letra
+      updateWordCryptScreen(myStorage.revealLetter(letter)) //si no es asi, dejar de ocultar esa letra
 
       if (myStorage.verifyWin()) { //comprobar que el usuario ya gano el juego
         updateModal(`Genial, adivinaste la palabra "${myStorage.actual()}", ganaste!! lo cual demuestra que eres un jugador de ahorcado muy habilidoso.`, 'Genial')
         stopGame()
       }
 
-      addLetter(letter)
+      addLetterScreen(letter)
     }
   } else{
     let intentosFallidos:number = myStorage.addFail()
-    addPiece(intentosFallidos) //mostrar nueva pieza
+    addPieceScreen(intentosFallidos) //mostrar nueva pieza
 
     if (intentosFallidos >= 9) { //comprobar que el usuario supero el numero de intentos
       updateModal('Perdiste el Juego.', 'Salir')
@@ -55,14 +54,14 @@ export const handleKeyPress = (e:KeyboardEvent) => {
 export const startGame = () => {
   window.addEventListener('keypress', handleKeyPress)
 
-  updateWord(myStorage.random())
+  updateWordCryptScreen(myStorage.random())
 }
 
 //LIMPIAR PANTALLA Y REINCIAR DATOS ///////////////////////////////////////////////////
 export const clearGame = () => {
   //reinciiar lo visible
-  updateWord(myStorage.random())
-  addLetter('')
+  updateWordCryptScreen(myStorage.random())
+  addLetterScreen('')
   lettersUsed.textContent = ''
 
   const images: HTMLImageElement[] = Array.from(document.querySelectorAll('.pieza'))
