@@ -1,4 +1,5 @@
 import { addWordToLocalStorage } from '../modules/db'
+import { updateModal } from '../modules/game'
 
 const buttonStartGame = document.querySelector<HTMLButtonElement>('#button-start-game') as HTMLButtonElement
 const buttonAddWord = document.querySelector<HTMLButtonElement>('#button-add-word') as HTMLButtonElement
@@ -9,6 +10,10 @@ const section3 = document.querySelector<HTMLElement>('#section-3') as HTMLElemen
 const textareaNewWord = document.querySelector<HTMLTextAreaElement>('#textarea-new-word') as HTMLTextAreaElement
 const buttonExitSection2 = document.querySelector<HTMLButtonElement>('#button-exit-section-2') as HTMLButtonElement
 const buttonExitSection3 = document.querySelector<HTMLButtonElement>('#button-exit-section-3') as HTMLButtonElement
+
+const modal = document.querySelector<HTMLDialogElement>('#modal') as HTMLDialogElement
+const modalText = document.querySelector<HTMLParagraphElement>('#modal-text') as HTMLParagraphElement
+const buttonExitModal = document.querySelector<HTMLButtonElement>('#button-exit-modal') as HTMLButtonElement
 
 const changeSection = (element1:HTMLElement, element2: HTMLElement) => {
   element1.classList.remove('section--active')
@@ -26,14 +31,14 @@ buttonAddWord.addEventListener('click', () => {
 })
 
 //AGRERAR LA PALABRA A LA LISTA DE POSIBLES PALABRAS
-buttonSaveWord.addEventListener('click', () => {
+buttonSaveWord?.addEventListener('click', () => {
   const word:string | undefined = textareaNewWord?.value
 
   if (word && word.length >= 8) {
     addWordToLocalStorage(word)
     changeSection(section2, section3)
   } else{
-    console.log('No hay texto para guardar o el texto supera los 8 caracteres')
+    updateModal('No hay texto para guardar o el texto supera los 8 caracteres', modal, modalText)
   }
 })
 
@@ -42,11 +47,14 @@ buttonExitSection2.addEventListener('click', () => {
   changeSection(section2, section1)
 })
 
-buttonExitSection3.addEventListener('click', () => {
+buttonExitSection3?.addEventListener('click', () => {
   changeSection(section3, section1)
 })
 
-
+// SALIR DEL MODAL
+buttonExitModal?.addEventListener('click', () => {
+  modal.close()
+})
 
 
 

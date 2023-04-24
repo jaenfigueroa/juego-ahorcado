@@ -20,6 +20,11 @@ export const addLetter = (letter: string) => {
   element.textContent += letter.toUpperCase()
 }
 
+//MOSTRAR EL TEXTO DEL MODAL Y MOSTRARLO
+export const updateModal = (text: string, modal:HTMLDialogElement, modalText:HTMLParagraphElement) => {
+  modalText.textContent = text
+  modal.showModal() //MOSTRAR EL MODAL
+}
 
 
 

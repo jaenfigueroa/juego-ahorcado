@@ -5,7 +5,7 @@
   padding: 1.8rem;
   border-radius: 1rem;
   border: 1px solid var(--primary);
-  /* transition: background 500ms linear; */
+  /* transition: background 200ms linear; */
 }
 
 .boton:hover,
@@ -23,12 +23,40 @@
   color: var(--primary);
   border: none;
   /* border: 1px dashed green; */
+  width: 100%;
 }
 .textarea::placeholder{
   color: var(--primary);
 }
 
+/* MODAL */
+.modal{
+  margin: auto; /* MUY IMPORTANTE PARA CENTRAR EL MODAL */
+  border: none;
+  background: transparent;
+}
+.modal-container{
+  display: flex;
+  padding: 2rem;
+  border-radius: .5rem;
+  flex-direction: column;
+  gap: 2rem;
+  background: white;
+  max-width: 320px;
+}
+.modal__text{
+  font-size: 1.8rem;
+  line-height: 25px;
+}
+.modal::backdrop{
+  background: rgba(0, 0, 0, 0.697); /* DARLE OSCURIDAD DETRAS DEL MODAL */
+}
 
+@media (min-width: 600px) {
+  .modal__text{
+    font-size: 2rem;
+  }
+}
 
 
 
