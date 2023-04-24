@@ -1,5 +1,5 @@
 import { myStorage } from '../..'
-import { section1, section2, section3, buttonExitSection2, buttonSaveWord, textareaNewWord } from '../modules/domElements'
+import { section1, section2, buttonExitSection2, buttonSaveWord, textareaNewWord } from '../modules/domElements'
 import { changeSection } from '../modules/navigate'
 import { updateModal } from '../components/modal'
 
@@ -9,9 +9,10 @@ buttonSaveWord?.addEventListener('click', () => {
 
   if (word && word.length <= 8) {
     myStorage.addWord(word)
-    changeSection(section2, section3)
+    // changeSection(section2, section3)
+    updateModal(`Perfecto, haz agregado "${word.toUpperCase()}" a la lista de posibles palabras.`, 'Genial')
   } else{
-    updateModal('No hay texto para guardar o el texto supera los 8 caracteres')
+    updateModal('No hay texto para guardar o el texto supera los 8 caracteres.', 'Volver a intentarlo')
   }
 })
 
