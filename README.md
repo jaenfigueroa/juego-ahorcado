@@ -47,6 +47,6 @@ El ahorcado es un juego en el que un jugador debe adivinar una palabra oculta ad
 
 ## 🌐 Sitio web
 
-Puedes ver el resultado [aqui](https://juego-ahorcado-jaenfigueroa.netlify.app/).
+Puedes empezar a probar el juego [aqui](https://juego-ahorcado-jaenfigueroa.netlify.app/).
 
 <img src="https://octodex.github.com/images/welcometocat.png" style="width: 25%">
