@@ -44,27 +44,18 @@
         <div class="pantalla">
           <div class="pantalla__container">
             <img class="pantalla__item pantalla__item--visible" src="./src/assets/persona-piso.svg" alt="pieza piso">
-            <img id="pieza-1" class="pantalla__item" src="./src/assets/persona-palo-1.svg" alt="pieza palo 1">
-            <img id="pieza-2" class="pantalla__item" src="./src/assets/persona-palo-2.svg" alt="pieza palo 2">
-            <img id="pieza-3" class="pantalla__item" src="./src/assets/persona-palo-3.svg" alt="pieza palo 3">
-            <img id="pieza-4" class="pantalla__item" src="./src/assets/persona-cabeza.svg" alt="pieza cabeza">
-            <img id="pieza-5" class="pantalla__item" src="./src/assets/persona-tronco.svg" alt="pieza tronco">
-            <img id="pieza-6" class="pantalla__item" src="./src/assets/persona-brazo-iz.svg" alt="pieza brazo izquierda">
-            <img id="pieza-7" class="pantalla__item" src="./src/assets/persona-brazo-de.svg" alt="pieza brazo derecha">
-            <img id="pieza-8" class="pantalla__item" src="./src/assets/persona-pierna-iz.svg" alt="pieza pierna izquierda">
-            <img id="pieza-9" class="pantalla__item" src="./src/assets/persona-pierna-de.svg" alt="pieza pierna derecha">
+            <img id="pieza-1" class="pieza pantalla__item" src="./src/assets/persona-palo-1.svg" alt="pieza palo 1">
+            <img id="pieza-2" class="pieza pantalla__item" src="./src/assets/persona-palo-2.svg" alt="pieza palo 2">
+            <img id="pieza-3" class="pieza pantalla__item" src="./src/assets/persona-palo-3.svg" alt="pieza palo 3">
+            <img id="pieza-4" class="pieza pantalla__item" src="./src/assets/persona-cabeza.svg" alt="pieza cabeza">
+            <img id="pieza-5" class="pieza pantalla__item" src="./src/assets/persona-tronco.svg" alt="pieza tronco">
+            <img id="pieza-6" class="pieza pantalla__item" src="./src/assets/persona-brazo-iz.svg" alt="pieza brazo izquierda">
+            <img id="pieza-7" class="pieza pantalla__item" src="./src/assets/persona-brazo-de.svg" alt="pieza brazo derecha">
+            <img id="pieza-8" class="pieza pantalla__item" src="./src/assets/persona-pierna-iz.svg" alt="pieza pierna izquierda">
+            <img id="pieza-9" class="pieza pantalla__item" src="./src/assets/persona-pierna-de.svg" alt="pieza pierna derecha">
           </div>
         </div>
-        <div class="espacios">
-          <p class="letras">C</p>
-          <p class="letras">A</p>
-          <p class="letras">S</p>
-          <p class="letras">A</p>
-          <p class="letras">C</p>
-          <p class="letras">A</p>
-          <p class="letras">S</p>
-          <p class="letras">A</p>
-        </div>
+        <p class="palabras" id="word"></p>
         <p class="usados" id="letras-usadas"></p>
         <div class="button-container">
           <button class="boton">Nuevo Juego</button>
@@ -78,7 +69,10 @@
   <dialog class="modal" id="modal">
     <div class="modal-container">
       <p id="modal-text" class="modal__text"></p>
-      <button class="boton" id="button-exit-modal">Salir</button>
+      <div class="modal__buttons-container" id="modal-container-buttons">
+        <button class="boton boton--novisible" id="button-pre">Accion</button>
+        <button class="boton" id="button-exit-modal">Salir</button>
+      </div>
     </div>
   </dialog>
 </body>
