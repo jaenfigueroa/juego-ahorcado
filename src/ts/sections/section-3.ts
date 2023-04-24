@@ -1,5 +1,5 @@
 import { myStorage } from '../..'
-import { section1, section3, buttonExitSection3, wordText, modal, lettersUsed } from '../../modules/domElements'
+import { section1, section3, buttonExitSection3, wordText, lettersUsed } from '../../modules/domElements'
 import { changeSection } from '../../modules/navigate'
 import { updateModal } from '../modal'
 
