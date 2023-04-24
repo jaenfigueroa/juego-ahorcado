@@ -39,7 +39,7 @@
     margin-top: 0rem;
   }
   .section-2 .button-container{
-    flex-direction: row;
+    flex-direction: row-reverse;
   }
   .section-2 .boton{
     width: 50%;
