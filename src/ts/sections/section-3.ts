@@ -1,6 +1,5 @@
-import { buttonExitSection3, section1, section3 } from '../modules/domElements'
-import { handleKeyPress } from '../modules/keyPress'
-import { changeSection } from '../modules/navigate'
+import { buttonExitSection3, section1, section3 } from '../../modules/domElements'
+import { changeSection } from '../../modules/navigate'
 
 //SALIR DE LA SECCION DEL JUEGO - VOLVER AL LA SECCION 1 (INICIO)
 buttonExitSection3?.addEventListener('click', () => {
@@ -28,4 +27,10 @@ export const addLetter = (letter: string) => {
   }
 
   element.textContent += letter.toUpperCase()
+}
+
+//RECONOCER QUE TECLA SE SELECCIONA DURANTE EL JUEGO
+export const handleKeyPress = (e:KeyboardEvent) => {
+  const letter = e.key
+  console.log(letter)
 }

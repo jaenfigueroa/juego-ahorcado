@@ -1,7 +1,7 @@
-import { buttonExitSection2, buttonSaveWord, modal, modalText, section1, section2, section3, textareaNewWord } from '../modules/domElements'
-import { changeSection } from '../modules/navigate'
-import { addWordToLocalStorage } from '../modules/storage'
-import { updateModal } from './modal'
+import { buttonExitSection2, buttonSaveWord, modal, modalText, section1, section2, section3, textareaNewWord } from '../../modules/domElements'
+import { changeSection } from '../../modules/navigate'
+import { addWordToLocalStorage } from '../../modules/storage'
+import { updateModal } from '../modal'
 
 //SALIR DE LA SECCION DE AGREGAR NUEVA PALABRA - VOLVER AL LA SECCION 1 (INICIO)
 buttonExitSection2.addEventListener('click', () => {

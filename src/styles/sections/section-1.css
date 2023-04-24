@@ -1,0 +1,20 @@
+/* SECCION 1 */
+.section-1{
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.section-1 .button-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.section-1 .boton{
+  width: 100%;
+}

@@ -1,0 +1,47 @@
+/* SECCION 2 */
+.section-2{
+  /* display: none; */
+  gap: 1rem;
+  max-width: 800px;
+}
+
+.section-2 .textarea{
+  flex-grow: 1;
+  margin-top: 4rem;
+}
+
+.section-2 .aviso{
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.section-2 .button-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section-2 .boton{
+  flex-grow: 1;
+}
+
+
+
+@media (min-width: 500px) {
+  .section-2{
+    margin: auto auto;
+    max-height: 600px;
+  }
+  .section-2 .textarea{
+    height: 600px;
+    font-size: 3rem;
+    margin-top: 0rem;
+  }
+  .section-2 .button-container{
+    flex-direction: row;
+  }
+  .section-2 .boton{
+    width: 50%;
+  }
+}
