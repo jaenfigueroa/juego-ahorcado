@@ -17,7 +17,9 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    "esModuleInterop": true, /* NECESARIO PARA HACER TEST CON JEST, PORQUE ESTAMOS USANDO MODULOS EN TS */
   },
   "include": ["src"]
 }
