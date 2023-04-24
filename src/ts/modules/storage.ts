@@ -3,12 +3,14 @@ export class Storage {
   actualWord: string[]
   actualWordCrypt: string[]
   usedLetters: string[]
+  intentosFallidos: number
 
   constructor(arraySaved:string[]){
     this.listWords = arraySaved
     this.actualWord = []
     this.actualWordCrypt = []
     this.usedLetters = []
+    this.intentosFallidos = 0
   }
 
   //ESCOGER UNA PALABRA AL AZAR
@@ -18,6 +20,10 @@ export class Storage {
 
     this.actualWord = this.listWords[randomNum].toUpperCase().split('')
     this.actualWordCrypt = new Array(this.actualWord.length).fill('_')
+
+    /* otros */
+    this.usedLetters = []
+    this.intentosFallidos = 0
 
     return this.actualWordCrypt.join('')
   }
@@ -87,9 +93,10 @@ export class Storage {
     return !this.actualWordCrypt.includes('_')
   }
 
-  //LIMPIAR
-  clear = () => {
-    this.usedLetters = []
+  //AGREGAR UN INTENTO FALLIDO
+  addFail = () => {
+    this.intentosFallidos ++
+    return this.intentosFallidos
   }
 }
 
