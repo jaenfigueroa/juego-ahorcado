@@ -1,5 +1,5 @@
 import { myStorage } from '../..'
-import { section1, section3, buttonExitSection3, wordText, lettersUsed } from '../../modules/domElements'
+import { section1, section3, buttonExitSection3, wordText, lettersUsed, buttonNewGame } from '../../modules/domElements'
 import { changeSection } from '../../modules/navigate'
 import { updateModal } from '../modal'
 
@@ -77,3 +77,6 @@ buttonExitSection3?.addEventListener('click', () => {
   changeSection(section3, section1)
   window.removeEventListener('keypress', handleKeyPress) //DEJAR DE ESCUCHAR EL TECLADO
 })
+
+//REINICIA EL JUEGO
+buttonNewGame.addEventListener('click', clearGame)

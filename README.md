@@ -14,6 +14,22 @@ El ahorcado es un juego en el que un jugador debe adivinar una palabra oculta ad
 
 </div>
 
+## 📷 Capturas de pantalla
+
+- ### 💻 Desktop
+
+<!-- <img src="./public/ahor3.png" style="width: 100%"  /> -->
+<img src="./public/ahor4.png" style="width: 100%"  />
+<img src="./public/ahor5.png" style="width: 100%"  />
+
+- ### 📱 Mobile
+
+<div>
+  <img src="./public/ahor6.png" style="width: 30%"   />
+  <img src="./public/ahor7.png" style="width: 30%"   />
+  <img src="./public/ahor8.png" style="width: 30%"   />
+</div>
+
 ## 🛠️ Tecnologias usadas
 
 <div align="left" >
@@ -25,19 +41,18 @@ El ahorcado es un juego en el que un jugador debe adivinar una palabra oculta ad
 
 <!-- ##  🔠 Fuente de texto
 
-- Lato - https://fonts.google.com/specimen/Lato?vfquery=lato&query=lato
+- Lato - https://fonts.google.com/specimen/Lato?vfquery=lato&query=lato -->
 
 ## 🎨 Paleta de colores
 
 <div>
-<img src="https://via.placeholder.com/200x50/20232A/FFF/?text=20232A" style="width: 120px">
-<img src="https://via.placeholder.com/200x50/282C34/FFF/?text=282C34" style="width: 120px">
-<img src="https://via.placeholder.com/200x50/D1D1D1/000000/?text=D1D1D1" style="width: 120px">
-<img src="https://via.placeholder.com/200x50/FFFFFF/000000/?text=FFFFFF" style="width: 120px">
-<img src="https://via.placeholder.com/200x50/61DAFB/000000/?text=61DAFB" style="width: 120px">
+  <img src="https://via.placeholder.com/200x50/0a3871/FFF/?text=0a3871" style="width: 120px">
+  <img src="https://via.placeholder.com/200x50/f3f5fc/FFF/?text=f3f5fc" style="width: 120px">
+  <img src="https://via.placeholder.com/200x50/495057/000000/?text=495057" style="width: 120px">
+  <img src="https://via.placeholder.com/200x50/FFFFFF/000000/?text=FFFFFF" style="width: 120px">
 </div>
 
-## 🌐 Sitio web
+<!-- ## 🌐 Sitio web
 
 Puedes ver el resultado [aqui](https://jaenfigueroa.github.io/text-encriptor/).
 
