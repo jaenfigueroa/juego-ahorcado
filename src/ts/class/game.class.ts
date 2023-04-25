@@ -38,7 +38,7 @@ export class Game {
   }
 
   //REEMPLAZAR LAS LETRAS X POR LA LETRA TECLEADA
-  revealLetter = (letter:string) => {
+  revealLetter = (letter:string):string => {
 
     if(this.usedLetters.includes(letter)){
       return this.actualWordCrypt.join('')
@@ -64,17 +64,17 @@ export class Game {
   }
 
   //DEVOLVER LA PALABRA ACTUAL - JUEGO
-  actual = () => {
+  actual = ():string => {
     return this.actualWord.join('')
   }
 
   //VERIFICAR SI EL USUARIO YA USO ESTA TECLA - JUEGO
-  verifyLetter = (letter:string) => {
+  verifyLetter = (letter:string):boolean => {
     return this.usedLetters.includes(letter)
   }
 
   //VERIFICAR SI LA LETRA SELECCIONADA ESTA EN LA PALABRA - JUEGO
-  existsLetter = (letter:string) => {
+  existsLetter = (letter:string):boolean => {
     return this.actualWord.includes(letter)
   }
 
@@ -84,13 +84,13 @@ export class Game {
   }
 
   //AGREGAR UN INTENTO FALLIDO - JUEGO
-  addFail = () => {
+  addFail = ():number => {
     this.intentosFallidos ++
     return this.intentosFallidos
   }
 
   //VERIFICAR SI EL USUARIO YA GANO EL JUEGO - JUEGO
-  verifyWin = () => {
+  verifyWin = ():boolean => {
     return !this.actualWordCrypt.includes('_')
   }
 }
