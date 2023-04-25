@@ -2,7 +2,7 @@
   background: transparent;
   color: var(--primary);
   padding: 1.8rem;
-  border-radius: 1rem;
+  border-radius: 1.3rem;
   border: 1px solid var(--primary);
   transition: background 200ms linear;
   outline: none;
