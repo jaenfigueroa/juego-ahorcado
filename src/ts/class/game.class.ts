@@ -1,9 +1,9 @@
 export class Game {
-  listWords: string[]
-  actualWord: string[]
-  actualWordCrypt: string[]
-  usedLetters: string[]
-  intentosFallidos: number
+  private listWords: string[]
+  private actualWord: string[]
+  private actualWordCrypt: string[]
+  private usedLetters: string[]
+  private intentosFallidos: number
 
   constructor(arraySaved:string[]){
     this.listWords = arraySaved
