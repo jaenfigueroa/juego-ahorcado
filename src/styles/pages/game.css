@@ -22,9 +22,11 @@
   height: 100%;
   display: none;
 }
+
 .page-game .screen__item--visible{
   display: initial;
 }
+
 .page-game .word{
   font-size: 3rem;
   text-align: center;

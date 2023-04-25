@@ -1,16 +1,29 @@
-import { buttonExitPageGame, wordText, lettersUsed, buttonNewGame } from '../utils/domElements.utils'
+import { buttonExitPageGame, wordText, lettersUsed, buttonNewGame, personSVG } from '../utils/domElements.utils'
 import { changePage } from '../utils/changePage.utils'
 import { updateModal } from '../components/modal.component'
 import { PAGES } from '../constants/pages.constants'
 import { myGame } from '../..'
 
-// AGREGAR UNA PIEZA DEL PERSONAJE /////////////////////////////////////
-const addPieceScreen = (number: number) => {
-  const piece = document.querySelector<HTMLElement>(`#piece-${number}`)
-  piece?.classList.add('screen__item--visible')
+// CAMBIAR EL COLOR A LA PIEZA
+const changeColor = (number:number, color:string) => {
+  const svgDoc = personSVG.contentDocument;
+  const rect = svgDoc!.getElementById(`piece-${number}`);
+  rect!.setAttribute("fill", color);
 }
 
-// AGREGAR LETRA A LA LISTA DE LETRAS YA TECLEADAS /////////////////////////
+// AGREGAR UNA PIEZA AL PERSONAJE
+const addPieceScreen = (number: number) => {
+  changeColor(number, "#0A3871")
+}
+
+//QUITARLE TODAS LAS PIEZAS AL PERSONAJE
+const quitPiecesScreen = () => {
+  for (let i = 1; i < 10; i++) {
+    changeColor(i, "#ffffff00")
+  }
+}
+
+// AGREGAR LETRA A LA LISTA DE LETRAS YA TECLEADAS
 const addLetterScreen = (letter: string) => {
   lettersUsed.textContent += letter.toUpperCase()
 }
@@ -60,16 +73,11 @@ export const startGame = () => {
 
 //LIMPIAR PANTALLA Y REINCIAR DATOS ///////////////////////////////////////////////////
 export const clearGame = () => {
-  //reinciiar lo visible
+  //reiniciar lo visible
   updateWordCryptScreen(myGame.random())
   addLetterScreen('')
   lettersUsed.textContent = ''
-
-  const images: HTMLImageElement[] = Array.from(document.querySelectorAll('.piece'))
-
-  images.map(img => {
-    img.classList.remove('screen__item--visible')
-  })
+  quitPiecesScreen()
 
   //reiniciar la data
   myGame.random()

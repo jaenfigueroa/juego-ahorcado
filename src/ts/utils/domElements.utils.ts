@@ -16,6 +16,7 @@ export const buttonExitPageGame = document.querySelector<HTMLButtonElement>('#bu
 export const wordText = document.querySelector<HTMLParagraphElement>('#word') as HTMLParagraphElement
 export const lettersUsed = document.querySelector<HTMLParagraphElement>('#used-letters') as HTMLParagraphElement
 export const buttonNewGame = document.querySelector<HTMLButtonElement>('#button-new-game') as HTMLButtonElement
+export const personSVG = document.getElementById('person-object') as HTMLObjectElement;
 
 //MODAL
 export const modal = document.querySelector<HTMLDialogElement>('#modal') as HTMLDialogElement
