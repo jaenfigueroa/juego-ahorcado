@@ -45,7 +45,7 @@ export const handleKeyPress = (e:KeyboardEvent) => {
     addPieceScreen(intentosFallidos) //mostrar nueva pieza
 
     if (intentosFallidos >= 9) { //comprobar que el usuario supero el numero de intentos
-      updateModal('Perdiste el Juego.', 'Salir')
+      updateModal('Lamentablemente has perdido, no has conseguido resolver el acertijo. ¡Mejor suerte la próxima vez!', 'Salir')
       stopGame()
     }
   }
