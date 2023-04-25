@@ -1,8 +1,8 @@
-import { myGame } from '../..'
 import { buttonExitPageGame, wordText, lettersUsed, buttonNewGame } from '../utils/domElements.utils'
 import { changePage } from '../utils/changePage.utils'
 import { updateModal } from '../components/modal.component'
 import { PAGES } from '../constants/pages.constants'
+import { myGame } from '../..'
 
 // AGREGAR UNA PIEZA DEL PERSONAJE /////////////////////////////////////
 const addPieceScreen = (number: number) => {
@@ -103,3 +103,4 @@ buttonExitPageGame?.addEventListener('click', () => {
   exitGame()
   changePage(PAGES.GAME, PAGES.HOME)
 })
+
