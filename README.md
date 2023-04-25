@@ -17,15 +17,15 @@ El ahorcado es un juego en el que un jugador debe adivinar una palabra oculta ad
 
 - ### 💻 Desktop
 
-<img src="./assets/ahor14.png" style="width: 100%"  />
-<img src="./assets/ahor13.png" style="width: 100%"  />
+<img src="./assets/des-2.png" style="width: 100%"  />
+<img src="./assets/des-1.png" style="width: 100%"  />
 
 - ### 📱 Mobile
 
 <div>
-  <img src="./assets/ahor10.png" style="width: 30%"   />
-  <img src="./assets/ahor11.png" style="width: 30%"   />
-  <img src="./assets/ahor12.png" style="width: 30%"   />
+  <img src="./assets/mob-0.png" style="width: 30%"   />
+  <img src="./assets/mob-1.png" style="width: 30%"   />
+  <img src="./assets/mob-2.png" style="width: 30%"   />
 </div>
 
 ## 🛠️ Tecnologias usadas
