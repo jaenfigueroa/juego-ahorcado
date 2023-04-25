@@ -1,4 +1,4 @@
-export class Storage {
+export class Game {
   listWords: string[]
   actualWord: string[]
   actualWordCrypt: string[]

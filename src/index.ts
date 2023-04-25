@@ -1,13 +1,13 @@
-import './ts/components/modal.ts'
+import './ts/components/modal.component.ts'
 import './ts/pages/'
-import { Storage } from './ts/modules/storage.ts'
+import { Game } from './ts/models/game.model.ts'
 
 // recuperar la lista de palabras del local storage
 const stringStorage: string | null = localStorage.getItem('words')
 const storedList: string[] = JSON.parse(stringStorage ?? '["batman"]')
 
 //crear mi storage por primera vez
-export const myStorage:Storage = new Storage(storedList)
+export const myGame:Game = new Game(storedList)
 
 
 

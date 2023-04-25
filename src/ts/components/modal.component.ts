@@ -1,4 +1,4 @@
-import { buttonExitModal, modal, modalText } from '../modules/domElements'
+import { buttonExitModal, modal, modalText } from '../utils/domElements.utils'
 
 //ACTUALIZAR EL TEXTO DEL MODAL Y MOSTRARLO
 export const updateModal = (text: string, buttonText:string) => {
