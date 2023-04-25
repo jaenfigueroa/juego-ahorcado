@@ -1,7 +1,8 @@
 import { myGame } from '../..'
-import { pageHome, pageAdmin, buttonExitPageAdmin, buttonSaveWord, textareaNewWord } from '../utils/domElements.utils'
+import { buttonExitPageAdmin, buttonSaveWord, textareaNewWord } from '../utils/domElements.utils'
 import { changePage } from '../utils/changePage.utils'
 import { updateModal } from '../components/modal.component'
+import { PAGES } from '../constants/pages.constants'
 
 //GUARDAR LA PALABRA EN LA LISTA DE POSIBLES PALABRAS - LOCALSTORAGE
 buttonSaveWord?.addEventListener('click', () => {
@@ -18,7 +19,7 @@ buttonSaveWord?.addEventListener('click', () => {
 
 //SALIR DE LA SECCION DE AGREGAR NUEVA PALABRA - VOLVER AL LA SECCION 1 (INICIO)
 buttonExitPageAdmin.addEventListener('click', () => {
-  changePage(pageAdmin, pageHome)
+  changePage(PAGES.ADMIN, PAGES.HOME)
 })
 
 

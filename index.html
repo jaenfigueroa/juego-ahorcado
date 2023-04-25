@@ -3,9 +3,13 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="author" content="Jaen Figueroa">
+  <meta name="description" content="El ahorcado es un juego en el que un jugador debe adivinar una palabra oculta adivinando las letras una por una. Si el jugador adivina una letra incorrecta, se dibuja una parte del cuerpo del ahorcado en la pantalla. El objetivo del jugador es adivinar la palabra antes de que se complete el dibujo del ahorcado.">
+  <meta name="keywords" content="HTML, CSS, TypeScript, Jest">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/svg+xml" href="alura.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite + TS</title>
+  <title>Juego Ahorcado</title>
   <link rel="stylesheet" href="./src/styles/index.css">
   <script type="module" src="./src/index.ts" defer></script>
 </head>
@@ -14,7 +18,7 @@
   <!-- APP -->
   <div class="app">
     <header class="header">
-      <img class="header__logo" src="./src/assets/alura.svg" alt="logo de alura">
+      <img class="header__logo" src="alura.svg" alt="logo de alura">
     </header>
     <main class="main">
 
@@ -30,7 +34,7 @@
       <section class="page page-admin" id="page-admin">
         <textarea class="textarea" placeholder="Ingrese una palabra" id="textarea-new-word" maxlength="8"></textarea>
         <div class="aviso">
-          <img src="./src/assets/aviso.svg" alt="icono de aviso">
+          <img src="aviso.svg" alt="icono de aviso">
           <p>Max. de 8 letras</p>
         </div>
         <div class="button-container">
@@ -43,16 +47,16 @@
       <section class="page page-game" id="page-game">
         <div class="screen">
           <div class="screen__container">
-            <img class="screen__item screen__item--visible" src="./src/assets/persona-piso.svg" alt="pieza piso">
-            <img id="piece-1" class="piece screen__item" src="./src/assets/persona-palo-1.svg" alt="pieza palo 1">
-            <img id="piece-2" class="piece screen__item" src="./src/assets/persona-palo-2.svg" alt="pieza palo 2">
-            <img id="piece-3" class="piece screen__item" src="./src/assets/persona-palo-3.svg" alt="pieza palo 3">
-            <img id="piece-4" class="piece screen__item" src="./src/assets/persona-cabeza.svg" alt="pieza cabeza">
-            <img id="piece-5" class="piece screen__item" src="./src/assets/persona-tronco.svg" alt="pieza tronco">
-            <img id="piece-6" class="piece screen__item" src="./src/assets/persona-brazo-iz.svg" alt="pieza brazo izquierda">
-            <img id="piece-7" class="piece screen__item" src="./src/assets/persona-brazo-de.svg" alt="pieza brazo derecha">
-            <img id="piece-8" class="piece screen__item" src="./src/assets/persona-pierna-iz.svg" alt="pieza pierna izquierda">
-            <img id="piece-9" class="piece screen__item" src="./src/assets/persona-pierna-de.svg" alt="pieza pierna derecha">
+            <img class="screen__item screen__item--visible" src="persona-piso.svg" alt="pieza piso">
+            <img id="piece-1" class="piece screen__item" src="persona-palo-1.svg" alt="pieza palo 1">
+            <img id="piece-2" class="piece screen__item" src="persona-palo-2.svg" alt="pieza palo 2">
+            <img id="piece-3" class="piece screen__item" src="persona-palo-3.svg" alt="pieza palo 3">
+            <img id="piece-4" class="piece screen__item" src="persona-cabeza.svg" alt="pieza cabeza">
+            <img id="piece-5" class="piece screen__item" src="persona-tronco.svg" alt="pieza tronco">
+            <img id="piece-6" class="piece screen__item" src="persona-brazo-iz.svg" alt="pieza brazo izquierda">
+            <img id="piece-7" class="piece screen__item" src="persona-brazo-de.svg" alt="pieza brazo derecha">
+            <img id="piece-8" class="piece screen__item" src="persona-pierna-iz.svg" alt="pieza pierna izquierda">
+            <img id="piece-9" class="piece screen__item" src="persona-pierna-de.svg" alt="pieza pierna derecha">
           </div>
         </div>
         <p class="word" id="word"></p>

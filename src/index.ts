@@ -1,6 +1,6 @@
 import './ts/components/modal.component.ts'
 import './ts/pages/'
-import { Game } from './ts/models/game.model.ts'
+import { Game } from './ts/class/game.class.ts'
 
 // recuperar la lista de palabras del local storage
 const stringStorage: string | null = localStorage.getItem('words')
