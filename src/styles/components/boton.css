@@ -1,25 +1,25 @@
-.boton{
+.button{
   background: transparent;
   color: var(--primary);
   padding: 1.8rem;
   border-radius: 1rem;
   border: 1px solid var(--primary);
-  transition: background 300ms linear;
+  transition: background 200ms linear;
   outline: none;
 }
 
-.boton:hover,
-.boton--active{
+.button:hover,
+.button--active{
   background: var(--primary);
   color: var(--secondary);
 }
 
-.boton--novisible{
+.button--novisible{
   display: none;
 }
 
-/* cambiar de colores ambos botones */
-.boton:hover + .boton--active{
+/* cambiar de colores ambos buttones */
+.button:hover + .button--active{
   background: transparent;
   color: var(--primary);
 }

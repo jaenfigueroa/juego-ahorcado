@@ -1,5 +1,5 @@
 import { myGame } from '../..'
-import { section1, section2, buttonExitSection2, buttonSaveWord, textareaNewWord } from '../utils/domElements.utils'
+import { pageHome, pageAdmin, buttonExitPageAdmin, buttonSaveWord, textareaNewWord } from '../utils/domElements.utils'
 import { changePage } from '../utils/changePage.utils'
 import { updateModal } from '../components/modal.component'
 
@@ -17,8 +17,8 @@ buttonSaveWord?.addEventListener('click', () => {
 })
 
 //SALIR DE LA SECCION DE AGREGAR NUEVA PALABRA - VOLVER AL LA SECCION 1 (INICIO)
-buttonExitSection2.addEventListener('click', () => {
-  changePage(section2, section1)
+buttonExitPageAdmin.addEventListener('click', () => {
+  changePage(pageAdmin, pageHome)
 })
 
 

@@ -1,9 +1,11 @@
-.modal{
-  margin: auto; /* MUY IMPORTANTE PARA CENTRAR EL MODAL */
+.modal {
+  margin: auto;
+  /* MUY IMPORTANTE PARA CENTRAR EL MODAL */
   border: none;
   background: transparent;
 }
-.modal-container{
+
+.modal-container {
   display: flex;
   padding: 2rem;
   border-radius: .5rem;
@@ -11,28 +13,44 @@
   gap: 2rem;
   background: white;
   max-width: 320px;
+  animation: zoom 200ms linear;
 }
-.modal__text{
+
+.modal__text {
   font-size: 1.8rem;
   line-height: 25px;
   text-align: center;
 }
-.modal__buttons-container{
+
+.modal__buttons-container {
   display: flex;
   flex-direction: row-reverse;
   gap: 1.5rem;
 }
 
-.modal .boton{
+.modal .button {
   flex-grow: 1;
 }
 
-.modal::backdrop{
-  background: rgba(0, 0, 0, 0.697); /* DARLE OSCURIDAD DETRAS DEL MODAL */
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.697);
+  /* DARLE OSCURIDAD DETRAS DEL MODAL */
 }
 
 @media (min-width: 600px) {
-  .modal__text{
+  .modal__text {
     font-size: 2rem;
+  }
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
