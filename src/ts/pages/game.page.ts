@@ -1,12 +1,12 @@
-import { myStorage } from '../..'
-import { section1, section3, buttonExitSection3, wordText, lettersUsed, buttonNewGame } from '../modules/domElements'
-import { changeSection } from '../modules/navigate'
-import { updateModal } from '../components/modal'
+import { myGame } from '../..'
+import { pageHome, pageGame, buttonExitPageGame, wordText, lettersUsed, buttonNewGame } from '../utils/domElements.utils'
+import { changePage } from '../utils/changePage.utils'
+import { updateModal } from '../components/modal.component'
 
 // AGREGAR UNA PIEZA DEL PERSONAJE /////////////////////////////////////
 const addPieceScreen = (number: number) => {
-  const piece = document.querySelector<HTMLElement>(`#pieza-${number}`)
-  piece?.classList.add('pantalla__item--visible')
+  const piece = document.querySelector<HTMLElement>(`#piece-${number}`)
+  piece?.classList.add('screen__item--visible')
 }
 
 // AGREGAR LETRA A LA LISTA DE LETRAS YA TECLEADAS /////////////////////////
@@ -26,21 +26,21 @@ const updateWordCryptScreen = (text:string) => {
 export const handleKeyPress = (e:KeyboardEvent) => {
   const letter = e.key.toUpperCase()
 
-  if (myStorage.existsLetter(letter)) { //comprobar si la letra es una de ellas en la palabra
+  if (myGame.existsLetter(letter)) { //comprobar si la letra es una de ellas en la palabra
 
-    if (!myStorage.verifyLetter(letter)) { //comprobar si el usuario ya lo tecleo antes
+    if (!myGame.verifyLetter(letter)) { //comprobar si el usuario ya lo tecleo antes
 
-      updateWordCryptScreen(myStorage.revealLetter(letter)) //si no es asi, dejar de ocultar esa letra
+      updateWordCryptScreen(myGame.revealLetter(letter)) //si no es asi, dejar de ocultar esa letra
 
-      if (myStorage.verifyWin()) { //comprobar que el usuario ya gano el juego
-        updateModal(`Genial, adivinaste la palabra "${myStorage.actual()}", ganaste!! lo cual demuestra que eres un jugador de ahorcado muy habilidoso.`, 'Genial')
+      if (myGame.verifyWin()) { //comprobar que el usuario ya gano el juego
+        updateModal(`Genial, adivinaste la palabra "${myGame.actual()}", ganaste!! lo cual demuestra que eres un jugador de ahorcado muy habilidoso.`, 'Genial')
         stopGame()
       }
 
       addLetterScreen(letter)
     }
   } else{
-    let intentosFallidos:number = myStorage.addFail()
+    let intentosFallidos:number = myGame.addFail()
     addPieceScreen(intentosFallidos) //mostrar nueva pieza
 
     if (intentosFallidos >= 9) { //comprobar que el usuario supero el numero de intentos
@@ -54,24 +54,24 @@ export const handleKeyPress = (e:KeyboardEvent) => {
 export const startGame = () => {
   window.addEventListener('keypress', handleKeyPress)
 
-  updateWordCryptScreen(myStorage.random())
+  updateWordCryptScreen(myGame.random())
 }
 
 //LIMPIAR PANTALLA Y REINCIAR DATOS ///////////////////////////////////////////////////
 export const clearGame = () => {
   //reinciiar lo visible
-  updateWordCryptScreen(myStorage.random())
+  updateWordCryptScreen(myGame.random())
   addLetterScreen('')
   lettersUsed.textContent = ''
 
-  const images: HTMLImageElement[] = Array.from(document.querySelectorAll('.pieza'))
+  const images: HTMLImageElement[] = Array.from(document.querySelectorAll('.piece'))
 
   images.map(img => {
-    img.classList.remove('pantalla__item--visible')
+    img.classList.remove('screen__item--visible')
   })
 
   //reiniciar la data
-  myStorage.random()
+  myGame.random()
 }
 
 //REINICIAR EL JUEGO ////////////////////////////////////////////////////////
@@ -98,7 +98,7 @@ const exitGame = () => {
 buttonNewGame.addEventListener('click', resetGame)
 
 //SALIR DE LA SECCION DEL JUEGO - VOLVER AL LA SECCION 1 (INICIO) ////////////
-buttonExitSection3?.addEventListener('click', () => {
+buttonExitPageGame?.addEventListener('click', () => {
   exitGame()
-  changeSection(section3, section1)
+  changePage(pageGame, pageHome)
 })

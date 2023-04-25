@@ -1,4 +1,4 @@
-export class Storage {
+export class Game {
   listWords: string[]
   actualWord: string[]
   actualWordCrypt: string[]
@@ -11,6 +11,15 @@ export class Storage {
     this.actualWordCrypt = []
     this.usedLetters = []
     this.intentosFallidos = 0
+  }
+
+  //GUARDAR UNA NUEVA PALABRA PAR EL JUEGO
+  addWord = (word:string) => {
+    //agregar al palabra
+    this.listWords.push(word)
+
+    //actualizar el valor
+    localStorage.setItem('words', JSON.stringify(this.listWords))
   }
 
   //ESCOGER UNA PALABRA AL AZAR
@@ -26,40 +35,6 @@ export class Storage {
     this.intentosFallidos = 0
 
     return this.actualWordCrypt.join('')
-  }
-
-  //DEVOLVER LA PALABRA ACTUAL
-  actual = () => {
-    return this.actualWord.join('')
-  }
-
-  //GUARDAR UNA NUEVA PALABRA
-  addWord = (word:string) => {
-    //agregar al palabra
-    this.listWords.push(word)
-
-    //actualizar el valor
-    this.update()
-  }
-
-  //ACTUALIZAR LA LISTA DEL LOCAL STORAGE
-  update = () => {
-    localStorage.setItem('words', JSON.stringify(this.listWords))
-  }
-
-  // AGREGAR NUEVA LETRA AL ARRAY DE LETRAS USADAS
-  addLetter = (letter:string) => {
-    this.usedLetters.push(letter)
-  }
-
-  //VERIFICAR SI LA LETRA SELECCIONADA ESTA EN LA PALABRA
-  existsLetter = (letter:string) => {
-    return this.actualWord.includes(letter)
-  }
-
-  //VERIFICAR SI EL USUARIO YA USO ESTA TECLA
-  verifyLetter = (letter:string) => {
-    return this.usedLetters.includes(letter)
   }
 
   //REEMPLAZAR LAS LETRAS X POR LA LETRA TECLEADA
@@ -88,15 +63,35 @@ export class Storage {
     return this.actualWordCrypt.join('')
   }
 
-  //VERIFICAR SI EL USUARIO YA GANO EL JUEGO
-  verifyWin = () => {
-    return !this.actualWordCrypt.includes('_')
+  //DEVOLVER LA PALABRA ACTUAL - JUEGO
+  actual = () => {
+    return this.actualWord.join('')
   }
 
-  //AGREGAR UN INTENTO FALLIDO
+  //VERIFICAR SI EL USUARIO YA USO ESTA TECLA - JUEGO
+  verifyLetter = (letter:string) => {
+    return this.usedLetters.includes(letter)
+  }
+
+  //VERIFICAR SI LA LETRA SELECCIONADA ESTA EN LA PALABRA - JUEGO
+  existsLetter = (letter:string) => {
+    return this.actualWord.includes(letter)
+  }
+
+  // AGREGAR NUEVA LETRA AL ARRAY DE LETRAS USADAS - JUEGO
+  addLetter = (letter:string) => {
+    this.usedLetters.push(letter)
+  }
+
+  //AGREGAR UN INTENTO FALLIDO - JUEGO
   addFail = () => {
     this.intentosFallidos ++
     return this.intentosFallidos
+  }
+
+  //VERIFICAR SI EL USUARIO YA GANO EL JUEGO - JUEGO
+  verifyWin = () => {
+    return !this.actualWordCrypt.includes('_')
   }
 }
 

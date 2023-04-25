@@ -5,11 +5,13 @@
 // 5. Verificar que la función que comprueba si el jugador ha perdido devuelve verdadero cuando el número de vidas restantes es cero.
 // 6. Asegurarse de que la función que comprueba si el jugador ha ganado devuelve verdadero cuando la palabra oculta se ha descubierto por completo.
 
-test('probando', () => {
-  expect(2).toEqual(2)
+describe('Section Game', () => {
+  test('los numeros deben ser iguales', () => {
+    expect(2).toBe(2)
+    expect(4).toBe(4)
+    expect(20).not.toBe(18)
+  })
 })
-
-
 
 
 

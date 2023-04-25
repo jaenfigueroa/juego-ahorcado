@@ -1,11 +1,9 @@
-/* SECCION 1 */
-.section-1{
-  /* display: flex; */
+.page-home{
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.section-1 .button-container{
+.page-home .button-container{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,6 +13,6 @@
   max-width: 300px;
 }
 
-.section-1 .boton{
+.page-home .button{
   width: 100%;
 }

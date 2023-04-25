@@ -1,0 +1,12 @@
+.textarea{
+  background: transparent;
+  resize: none;
+  outline: none;
+  font-size: 2.5rem;
+  color: var(--primary);
+  border: none;
+  width: 100%;
+}
+.textarea::placeholder{
+  color: var(--primary);
+}

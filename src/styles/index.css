@@ -1,9 +1,7 @@
 @import url('./reset.css');
 @import url('./variables.css');
-@import url('./components.css');
-@import url('./sections/section-1.css'); /* SECCION INICIO */
-@import url('./sections/section-2.css'); /* SECCION AGREGAR NUEVA PALABRA */
-@import url('./sections/section-3.css'); /* SECCION JUEGO */
+@import url('./components/');
+@import url('./pages/');
 
 .app{
   width: 100%;
@@ -30,14 +28,14 @@
 }
 
 /* SECTIONS */
-.section{
+.page{
   display: none;
   flex-grow: 1;
   flex-direction: column;
   padding: 1.5rem;
 }
 
-.section--active{
+.page--active{
   display: flex;
 }
 
