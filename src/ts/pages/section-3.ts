@@ -1,6 +1,6 @@
 import { myStorage } from '../..'
 import { section1, section3, buttonExitSection3, wordText, lettersUsed, buttonNewGame } from '../modules/domElements'
-import { changeSection } from '../modules/navigate'
+import { changeSection } from '../helpers/navigate'
 import { updateModal } from '../components/modal'
 
 // AGREGAR UNA PIEZA DEL PERSONAJE /////////////////////////////////////

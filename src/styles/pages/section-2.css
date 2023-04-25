@@ -1,6 +1,4 @@
-/* SECCION 2 */
 .section-2{
-  /* display: none; */
   gap: 1rem;
   max-width: 800px;
 }
@@ -25,8 +23,6 @@
 .section-2 .boton{
   flex-grow: 1;
 }
-
-
 
 @media (min-width: 500px) {
   .section-2{

@@ -1,6 +1,6 @@
 import { myStorage } from '../..'
 import { section1, section2, buttonExitSection2, buttonSaveWord, textareaNewWord } from '../modules/domElements'
-import { changeSection } from '../modules/navigate'
+import { changeSection } from '../helpers/navigate'
 import { updateModal } from '../components/modal'
 
 //GUARDAR LA PALABRA EN LA LISTA DE POSIBLES PALABRAS - LOCALSTORAGE

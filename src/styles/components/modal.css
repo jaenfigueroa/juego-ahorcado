@@ -1,0 +1,38 @@
+.modal{
+  margin: auto; /* MUY IMPORTANTE PARA CENTRAR EL MODAL */
+  border: none;
+  background: transparent;
+}
+.modal-container{
+  display: flex;
+  padding: 2rem;
+  border-radius: .5rem;
+  flex-direction: column;
+  gap: 2rem;
+  background: white;
+  max-width: 320px;
+}
+.modal__text{
+  font-size: 1.8rem;
+  line-height: 25px;
+  text-align: center;
+}
+.modal__buttons-container{
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1.5rem;
+}
+
+.modal .boton{
+  flex-grow: 1;
+}
+
+.modal::backdrop{
+  background: rgba(0, 0, 0, 0.697); /* DARLE OSCURIDAD DETRAS DEL MODAL */
+}
+
+@media (min-width: 600px) {
+  .modal__text{
+    font-size: 2rem;
+  }
+}

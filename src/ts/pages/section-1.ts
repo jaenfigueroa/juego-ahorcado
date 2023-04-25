@@ -1,4 +1,4 @@
-import { changeSection } from '../modules/navigate'
+import { changeSection } from '../helpers/navigate'
 import { buttonAddWord, buttonStartGame, section1, section2, section3 } from '../modules/domElements'
 import { startGame } from './section-3'
 
