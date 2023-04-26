@@ -1,7 +1,11 @@
 import { personSVG } from './domElements.utils';
 
 export const changeColor = (number: number, color: string) => {
-  const myDoc= personSVG.contentDocument
-  const rect = myDoc!.getElementById(`piece-${number}`);
-  rect!.style.fill = color;
-}
+  const { contentDocument } = personSVG;
+  if (contentDocument !== null) {
+    const rect = contentDocument.getElementById(`piece-${number}`);
+    if (rect !== null) {
+      rect.style.fill = color;
+    }
+  }
+};

@@ -7,13 +7,13 @@ import { changeColor } from '../utils/changeColor.utils'
 
 // AGREGAR UNA PIEZA AL PERSONAJE
 const addPieceScreen = (number: number) => {
-  changeColor(number, "#0A3871")
+  changeColor(number, '#0A3871')
 }
 
 //QUITARLE TODAS LAS PIEZAS AL PERSONAJE
 const quitPiecesScreen = () => {
   for (let i = 1; i < 10; i++) {
-    changeColor(i, "#ffffff00")
+    changeColor(i, '#ffffff00')
   }
 }
 
