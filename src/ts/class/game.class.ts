@@ -1,16 +1,12 @@
 export class Game {
   private listWords: string[]
-  private actualWord: string[]
-  private actualWordCrypt: string[]
-  private usedLetters: string[]
-  private intentosFallidos: number
+  private actualWord: string[] = []
+  private actualWordCrypt: string[] = []
+  private usedLetters: string[] = []
+  private intentosFallidos: number = 0
 
   constructor(arraySaved:string[]){
     this.listWords = arraySaved
-    this.actualWord = []
-    this.actualWordCrypt = []
-    this.usedLetters = []
-    this.intentosFallidos = 0
   }
 
   //GUARDAR UNA NUEVA PALABRA PAR EL JUEGO
