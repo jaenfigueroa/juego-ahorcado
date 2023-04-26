@@ -1,15 +1,9 @@
-import { buttonExitPageGame, wordText, lettersUsed, buttonNewGame, personSVG } from '../utils/domElements.utils'
+import { buttonExitPageGame, wordText, lettersUsed, buttonNewGame } from '../utils/domElements.utils'
 import { changePage } from '../utils/changePage.utils'
 import { updateModal } from '../components/modal.component'
 import { PAGES } from '../constants/pages.constants'
 import { myGame } from '../..'
-
-// CAMBIAR EL COLOR A LA PIEZA
-const changeColor = (number:number, color:string) => {
-  const svgDoc = personSVG.contentDocument;
-  const rect = svgDoc!.getElementById(`piece-${number}`);
-  rect!.setAttribute("fill", color);
-}
+import { changeColor } from '../utils/changeColor.utils'
 
 // AGREGAR UNA PIEZA AL PERSONAJE
 const addPieceScreen = (number: number) => {
@@ -23,14 +17,14 @@ const quitPiecesScreen = () => {
   }
 }
 
-// AGREGAR LETRA A LA LISTA DE LETRAS YA TECLEADAS
-const addLetterScreen = (letter: string) => {
-  lettersUsed.textContent += letter.toUpperCase()
-}
-
 //ACTUALIZAR LA PALABRA CIFRADA DE LA PANTALLA
 const updateWordCryptScreen = (text:string) => {
   wordText.textContent = text
+}
+
+// AGREGAR LETRA USADA A LA PANTALLA
+const addLetterScreen = (letter: string) => {
+  lettersUsed.textContent += letter.toUpperCase()
 }
 
 ///////////////////////////////////////////////////////////////////////////
