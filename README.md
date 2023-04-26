@@ -11,6 +11,8 @@ El ahorcado es un juego en el que un jugador debe adivinar una palabra oculta ad
   <img src="https://img.shields.io/github/forks/jaenfigueroa/juego-ahorcado">
   <img src="https://img.shields.io/github/issues-pr/jaenfigueroa/juego-ahorcado">
   <img src="https://img.shields.io/github/issues/jaenfigueroa/juego-ahorcado">
+  <img src="https://img.shields.io/github/issues/jaenfigueroa/juego-ahorcado">
+  <a href='https://app.netlify.com/sites/juego-ahorcado-jaenfigueroa/deploys'><img src="https://api.netlify.com/api/v1/badges/373489e1-7045-4381-93f5-766746c844e7/deploy-status"></img></a>
 </div>
 
 ## 📷 Capturas de pantalla
