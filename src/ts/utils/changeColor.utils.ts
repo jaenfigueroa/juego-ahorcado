@@ -1,4 +1,4 @@
-import { personSVG } from './domElements.utils';
+import { personSVG } from './domElements.utils'
 
 //CAMBIAR DE COLOR A UNA DE LAS PIEZAS
 export const changeColor = (number: number, color: string) => {
