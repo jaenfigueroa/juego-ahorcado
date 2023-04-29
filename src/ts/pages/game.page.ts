@@ -48,7 +48,7 @@ export const handleKeyPress = (e:KeyboardEvent) => {
       addLetterScreen(letter)
     }
   } else{
-    let intentosFallidos:number = myGame.addFail()
+    const intentosFallidos:number = myGame.addFail()
     addPieceScreen(intentosFallidos) //mostrar nueva pieza
 
     if (intentosFallidos >= 9) { //comprobar que el usuario supero el numero de intentos

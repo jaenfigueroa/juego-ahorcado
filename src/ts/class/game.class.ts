@@ -3,13 +3,13 @@ export class Game {
   private actualWord: string[] = []
   private actualWordCrypt: string[] = []
   private usedLetters: string[] = []
-  private intentosFallidos: number = 0
+  private intentosFallidos = 0
 
   constructor(arraySaved:string[]){
     this.listWords = arraySaved
   }
 
-  //GUARDAR UNA NUEVA PALABRA PAR EL JUEGO
+  //GUARDAR UNA NUEVA PALABRA PARA EL JUEGO
   addWord = (word:string) => {
     //agregar al palabra
     this.listWords.push(word)
@@ -40,8 +40,8 @@ export class Game {
       return this.actualWordCrypt.join('')
     }
 
-    let originalList:string[] = this.actualWord
-    let cryptList:string[] = this.actualWordCrypt
+    const originalList:string[] = this.actualWord
+    const cryptList:string[] = this.actualWordCrypt
 
     // si la letra conicide tecleada con alguna letra de la palabra escondida,
     // lo reemplaza por esa letra
